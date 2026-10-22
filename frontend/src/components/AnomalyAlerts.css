@@ -1,0 +1,146 @@
+.anomaly-alerts {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.anomaly-alerts h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ff4757, #ff6b7a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.no-alerts {
+  text-align: center;
+  padding: 40px 20px;
+  color: #a0aec0;
+}
+
+.no-alerts-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.no-alerts p {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #00ff88;
+}
+
+.no-alerts-sub {
+  font-size: 0.9rem;
+  color: #718096;
+}
+
+.alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.alert-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 15px;
+  border-left: 4px solid;
+  transition: transform 0.2s ease;
+}
+
+.alert-card:hover {
+  transform: translateX(5px);
+}
+
+.alert-card.critical {
+  border-left-color: #ff4757;
+  background: rgba(255, 71, 87, 0.1);
+}
+
+.alert-card.high {
+  border-left-color: #ff9f43;
+  background: rgba(255, 159, 67, 0.1);
+}
+
+.alert-card.medium {
+  border-left-color: #ffc107;
+  background: rgba(255, 193, 7, 0.1);
+}
+
+.alert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.alert-severity {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alert-severity.critical {
+  background: rgba(255, 71, 87, 0.2);
+  color: #ff4757;
+}
+
+.alert-severity.high {
+  background: rgba(255, 159, 67, 0.2);
+  color: #ff9f43;
+}
+
+.alert-severity.medium {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+.alert-time {
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+.alert-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.alert-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  font-weight: 500;
+}
+
+.alert-footer {
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.alert-score {
+  font-size: 0.85rem;
+  color: #a0aec0;
+}
+
+@media (max-width: 768px) {
+  .alert-body {
+    grid-template-columns: 1fr;
+  }
+}
